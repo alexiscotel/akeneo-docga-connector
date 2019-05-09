@@ -1,0 +1,5 @@
+css:
+    docga-extended-attribute-type:
+        - bundles/docgaextendedattributetype/css/configuration.css
+        - bundles/docgaextendedattributetype/css/docga-modal.css
+

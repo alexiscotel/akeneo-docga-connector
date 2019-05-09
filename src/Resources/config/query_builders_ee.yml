@@ -1,0 +1,12 @@
+parameters:
+    pimee_workflow.query.elasticsearch.filter.docga.class: Oniti\Docga\ConnectorBundle\Elasticsearch\Filter\Attribute\ProductProposalDocgaFilter
+
+services:
+    pimee_workflow.query.elasticsearch.filter.docga:
+        class: '%pimee_workflow.query.elasticsearch.filter.docga.class%'
+        arguments:
+            - '@pimee_workflow.query.elasticsearch.attribute_path_resolver'
+            - [!php/const:\Oniti\Docga\ConnectorBundle\AttributeType\ExtendedAttributeTypes::DOCGA]
+            - ['CONTAINS', 'DOES NOT CONTAIN', 'EMPTY', 'NOT EMPTY']
+        tags:
+            - { name: 'pimee_workflow.elasticsearch.query.product_proposal_filter', priority: 40 }

@@ -1,0 +1,3 @@
+parameters:
+    pim_catalog.entity.value.docga.class: Oniti\Docga\ConnectorBundle\Model\DocgaValue
+

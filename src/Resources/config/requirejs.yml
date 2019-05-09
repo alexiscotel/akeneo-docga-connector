@@ -1,0 +1,22 @@
+config:
+    shim:
+        oniti/docga/connector/field-docga:
+            deps:
+                - docgaextendedattributetype/js/product/field/docga_api
+    paths:
+        docga-extended-attribute-type/docga-field: docgaextendedattributetype/js/product/field/docga-field
+        docga-extended-attribute-type/templates/product/field/docga: docgaextendedattributetype/templates/product/field/docga.html
+        docga-extended-attribute-type/templates/product/field/docga: docgaextendedattributetype/templates/product/field/docga.html
+        docga-extended-attribute-type/templates/datagrid/cell/docga: docgaextendedattributetype/templates/datagrid/cell/docga.html
+        oro/datagrid/docga-cell: docgaextendedattributetype/js/datagrid/cell/docga-cell
+
+    config:
+        pim/form/common/attributes/create-button:
+            attribute_icons:
+                pim_catalog_docga: assetCollection
+
+        pim/attribute-edit-form/type-specific-form-registry:
+            formNames:
+                pim_catalog_docga:
+                    create: pim-attribute-form-text
+                    edit:   pim-attribute-form-text

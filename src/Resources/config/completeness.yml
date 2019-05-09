@@ -1,0 +1,8 @@
+parameters:
+    docga_extended_attribute_type.completeness.checker.docga.class: Oniti\Docga\ConnectorBundlele\Completeness\Checker\DocgaCompleteChecker
+
+services:
+    docga_extended_attribute_type.completeness.checker.docga:
+        class: '%docga_extended_attribute_type.completeness.checker.docga.class%'
+        tags:
+            - { name: pim_catalog.completeness.checker.product_value, priority: 100 }

@@ -1,0 +1,13 @@
+parameters:
+    pim_catalog.factory.value.docga.class: Oniti\Docga\ConnectorBundle\Factory\Value\DocgaValueFactory
+
+services:
+    pim_catalog.factory.value.docga:
+        class: '%pim_catalog.factory.value.docga.class%'
+        public: false
+        arguments:
+            - '%pim_catalog.entity.value.docga.class%'
+            - !php/const:\Oniti\Docga\ConnectorBundle\AttributeType\ExtendedAttributeTypes::DOCGA
+        tags:
+            - { name: pim_catalog.factory.value }
+

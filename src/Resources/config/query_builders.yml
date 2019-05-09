@@ -1,0 +1,14 @@
+parameters:
+        pim_catalog.query.elasticsearch.filter.text_collection.class: Oniti\Docga\ConnectorBundle\Elasticsearch\Filter\Attribute\DocgaFilter
+
+services:
+    pim_catalog.query.elasticsearch.filter.text_collection:
+        class: '%pim_catalog.query.elasticsearch.filter.text_collection.class%'
+        arguments:
+            - '@pim_catalog.validator.helper.attribute'
+            - [!php/const:\Oniti\Docga\ConnectorBundle\AttributeType\ExtendedAttributeTypes::DOCGA]
+            - ['CONTAINS', 'DOES NOT CONTAIN', 'EMPTY', 'NOT EMPTY']
+        tags:
+            - { name: 'pim_catalog.elasticsearch.query.product_filter', priority: 30 }
+            - { name: 'pim_catalog.elasticsearch.query.product_model_filter', priority: 30 }
+            - { name: 'pim_catalog.elasticsearch.query.product_and_product_model_filter', priority: 30 }

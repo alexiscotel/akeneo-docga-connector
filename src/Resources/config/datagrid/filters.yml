@@ -1,0 +1,11 @@
+parameters:
+    docga_extended_attribute_type.docga_filter.class: Oniti\Docga\ConnectorBundle\Filter\ProductValue\DocgaFilter
+
+services:
+    docga_extended_attribute_type.docga_filter:
+        class: '%docga_extended_attribute_type.docga_filter.class%'
+        arguments:
+            - '@form.factory'
+            - '@pim_filter.product_utility'
+        tags:
+            - { name: oro_filter.extension.orm_filter.filter, type: product_value_docga }

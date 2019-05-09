@@ -1,0 +1,6 @@
+services:
+    docga_extended_attribute_type.validator.constraint_guesser.docga:
+        public: false
+        class: '%docga_extended_attribute_type.validator.constraint_guesser.docga.class%'
+        tags:
+            - { name: pim_catalog.constraint_guesser.attribute }

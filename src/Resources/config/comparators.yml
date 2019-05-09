@@ -1,0 +1,10 @@
+parameters:
+    pim_catalog.comparator.attribute.docga.class: Oniti\Docga\ConnectorBundle\Updater\Comparator\DocgaComparator
+
+services:
+    docga_extended_attribute_type.comparator.attribute.docga:
+        class: '%pim_catalog.comparator.attribute.docga.class%'
+        arguments:
+            - ['pim_catalog_docga']
+        tags:
+            - { name: pim_catalog.attribute.comparator }

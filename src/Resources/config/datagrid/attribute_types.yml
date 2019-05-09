@@ -1,0 +1,10 @@
+parameters:
+    pim_datagrid.product.attribute_type.pim_catalog_docga.template: DocgaExtendedAttributeTypeBundle:datagrid/property:docga.html.twig
+    pim_datagrid.product.attribute_type.pim_catalog_docga:
+        column:
+            type:          product_value_field
+            frontend_type: docga
+        filter:
+            type:          product_value_docga
+            ftype:         string
+        sorter: ~
