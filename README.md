@@ -3,7 +3,7 @@
 Provides new attributes types for Akeneo PIM CE and EE:
 - TextCollection: this attribute type can store an ordered collection of strings or URLs.
 
-![DocGa - Attribut Akeneo](Oniti/Docga/ConnectorBundle/Resources/public/images/logo.png)
+![DocGa - Attribut Akeneo](src/Resources/public/images/logo.png)
 
 
 ## Installation
