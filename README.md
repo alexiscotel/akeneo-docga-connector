@@ -8,7 +8,7 @@ Provides new attributes types for Akeneo PIM CE and EE:
 
 ## Installation
 ```
-    composer require oniti/docga-akeneo-connector
+    composer require oniti/akeneo-docga-connector
 ```
 
 Add the following bundle in your `app/AppKernel.php` file:
