@@ -4,8 +4,9 @@ namespace Oniti\Docga\ConnectorBundle\Factory\Value;
 
 use Akeneo\Component\StorageUtils\Exception\InvalidPropertyTypeException;
 use Pim\Component\Catalog\AttributeTypes;
-use Pim\Component\Catalog\Factory\Value\ValueFactoryInterface;
-use Pim\Component\Catalog\Model\AttributeInterface;
+use Akeneo\Pim\Enrichment\Component\Product\Factory\Value\ValueFactoryInterface;
+use Akeneo\Pim\Structure\Component\Model\AttributeInterface;
+use Akeneo\Pim\Enrichment\Component\Product\Model\ValueInterface;
 
 
 class DocgaValueFactory implements ValueFactoryInterface
@@ -29,7 +30,7 @@ class DocgaValueFactory implements ValueFactoryInterface
     /**
      * {@inheritdoc}
      */
-    public function create(AttributeInterface $attribute, $channelCode, $localeCode, $data)
+    public function create(AttributeInterface $attribute, ?string $channelCode, ?string $localeCode, $data, bool $ignoreUnknownData = false) : ValueInterface
     {
         $this->checkData($attribute, $data);
 
@@ -45,7 +46,7 @@ class DocgaValueFactory implements ValueFactoryInterface
     /**
      * {@inheritdoc}
      */
-    public function supports($attributeType)
+    public function supports(string $attributeType) : bool
     {
         return $attributeType === $this->supportedAttributeTypes;
     }
