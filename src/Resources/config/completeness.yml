@@ -4,5 +4,7 @@ parameters:
 services:
     docga_extended_attribute_type.completeness.checker.docga:
         class: '%docga_extended_attribute_type.completeness.checker.docga.class%'
+        arguments:
+            - '@pim_catalog.repository.cached_attribute'
         tags:
             - { name: pim_catalog.completeness.checker.product_value, priority: 100 }

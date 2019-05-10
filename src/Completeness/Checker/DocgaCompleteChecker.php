@@ -3,13 +3,24 @@
 namespace  Oniti\Docga\ConnectorBundle\Completeness\Checker;
 
 use  Oniti\Docga\ConnectorBundle\AttributeType\ExtendedAttributeTypes;
+
 use Akeneo\Pim\Enrichment\Component\Product\Completeness\Checker\ValueCompleteCheckerInterface;
 use Akeneo\Channel\Component\Model\ChannelInterface;
 use Akeneo\Channel\Component\Model\LocaleInterface;
 use Akeneo\Pim\Enrichment\Component\Product\Model\ValueInterface;
+use Akeneo\Tool\Component\StorageUtils\Repository\IdentifiableObjectRepositoryInterface;
+
+
 
 class DocgaCompleteChecker implements ValueCompleteCheckerInterface
 {
+    /** @var IdentifiableObjectRepositoryInterface */
+    protected $attributeRepository;
+
+    public function __construct(IdentifiableObjectRepositoryInterface $attributeRepository){
+        $this->attributeRepository = $attributeRepository;
+    }
+
     /**
      * {@inheritdoc}
      */
@@ -39,6 +50,8 @@ class DocgaCompleteChecker implements ValueCompleteCheckerInterface
         ChannelInterface $channel,
         LocaleInterface $locale
     ) {
-        return ExtendedAttributeTypes::DOCGA === $value->getAttribute()->getType();
+        $attribute = $this->attributeRepository->findOneByIdentifier($value->getAttributeCode());
+
+        return ExtendedAttributeTypes::DOCGA === $attribute->getType();
     }
 }

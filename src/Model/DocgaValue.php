@@ -12,18 +12,10 @@ class DocgaValue extends AbstractValue implements ValueInterface
     protected $data;
 
     /**
-     * @param AttributeInterface $attribute
-     * @param string             $channel
-     * @param string             $locale
-     * @param mixed              $data
+     * 
      */
-    public function __construct(AttributeInterface $attribute, $channel, $locale, $data)
-    {
-        $this->setAttribute($attribute);
-        $this->setScope($channel);
-        $this->setLocale($locale);
-
-        $this->data = $data;
+    public function __construct(string $attributeCode, $data = null, ?string $scopeCode, ?string $localeCode){
+        parent::__construct($attributeCode, $data, $scopeCode, $localeCode);
     }
 
     /**
