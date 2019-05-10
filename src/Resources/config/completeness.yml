@@ -1,5 +1,5 @@
 parameters:
-    docga_extended_attribute_type.completeness.checker.docga.class: Oniti\Docga\ConnectorBundlele\Completeness\Checker\DocgaCompleteChecker
+    docga_extended_attribute_type.completeness.checker.docga.class:  Oniti\Docga\ConnectorBundle\Completeness\Checker\DocgaCompleteChecker
 
 services:
     docga_extended_attribute_type.completeness.checker.docga:

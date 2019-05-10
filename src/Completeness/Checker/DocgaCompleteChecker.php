@@ -1,8 +1,8 @@
 <?php
 
-namespace Oniti\Docga\ConnectorBundlele\Completeness\Checker;
+namespace  Oniti\Docga\ConnectorBundle\Completeness\Checker;
 
-use Oniti\Docga\ConnectorBundlele\AttributeType\ExtendedAttributeTypes;
+use  Oniti\Docga\ConnectorBundle\AttributeType\ExtendedAttributeTypes;
 use Akeneo\Pim\Enrichment\Component\Product\Completeness\Checker\ValueCompleteCheckerInterface;
 use Akeneo\Channel\Component\Model\ChannelInterface;
 use Akeneo\Channel\Component\Model\LocaleInterface;
