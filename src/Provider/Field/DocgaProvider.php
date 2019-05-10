@@ -2,9 +2,9 @@
 
 namespace Oniti\Docga\ConnectorBundle\Provider\Field;
 
-use Pim\Bundle\EnrichBundle\Provider\Field\FieldProviderInterface;
 use Oniti\Docga\ConnectorBundle\AttributeType\ExtendedAttributeTypes;
-use Pim\Component\Catalog\Model\AttributeInterface;
+use Akeneo\Platform\Bundle\UIBundle\Provider\Field\FieldProviderInterface;
+use Akeneo\Pim\Structure\Component\Model\AttributeInterface;
 
 class DocgaProvider implements FieldProviderInterface
 {

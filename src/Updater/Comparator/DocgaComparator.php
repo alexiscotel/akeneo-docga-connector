@@ -2,7 +2,7 @@
 
 namespace Oniti\Docga\ConnectorBundle\Updater\Comparator;
 
-use Pim\Component\Catalog\Comparator\ComparatorInterface;
+use Akeneo\Pim\Enrichment\Component\Product\Comparator\ComparatorInterface;
 
 /**
  * Comparator which calculate change set for text collection
@@ -35,9 +35,6 @@ class DocgaComparator implements ComparatorInterface
     {
         $default = ['locale' => null, 'scope' => null, 'data' => []];
         $originals = array_merge($default, $originals);
-        if (null === $data['data']) {
-            $data['data'] = [];
-        }
 
         if ($data['data'] === $originals['data']) {
             return null;

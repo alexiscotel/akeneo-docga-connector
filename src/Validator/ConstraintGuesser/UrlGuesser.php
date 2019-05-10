@@ -3,8 +3,8 @@
 namespace Oniti\Docga\ConnectorBundle\Validator\ConstraintGuesser;
 
 use Oniti\Docga\ConnectorBundle\AttributeType\ExtendedAttributeTypes;
-use Pim\Component\Catalog\Model\AttributeInterface;
-use Pim\Component\Catalog\Validator\ConstraintGuesser\UrlGuesser as PimUrlGuesser;
+use Akeneo\Pim\Structure\Component\Model\AttributeInterface;
+use Akeneo\Pim\Enrichment\Component\Product\Validator\ConstraintGuesser\LengthGuesser as PimLengthGuesser;
 
 /**
  * Url guesser

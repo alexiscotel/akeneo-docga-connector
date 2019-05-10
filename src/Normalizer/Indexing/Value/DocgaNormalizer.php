@@ -3,11 +3,11 @@
 namespace Oniti\Docga\ConnectorBundle\Normalizer\Indexing\Value;
 
 use Oniti\Docga\ConnectorBundle\Model\DocgaValue;
-use Pim\Component\Catalog\Model\ValueInterface;
-use Pim\Component\Catalog\Normalizer\Indexing\Product\ProductNormalizer;
-use Pim\Component\Catalog\Normalizer\Indexing\ProductAndProductModel;
-use Pim\Component\Catalog\Normalizer\Indexing\ProductModel;
-use Pim\Component\Catalog\Normalizer\Indexing\Value\AbstractProductValueNormalizer;
+use Akeneo\Pim\Enrichment\Component\Product\Model\ValueInterface;
+use Akeneo\Pim\Enrichment\Component\Product\Normalizer\Indexing\Product\ProductNormalizer;
+use Akeneo\Pim\Enrichment\Component\Product\Normalizer\Indexing\ProductAndProductModel;
+use Akeneo\Pim\Enrichment\Component\Product\Normalizer\Indexing\ProductModel;
+use Akeneo\Pim\Enrichment\Component\Product\Normalizer\Indexing\Value\AbstractProductValueNormalizer;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
 
 /**

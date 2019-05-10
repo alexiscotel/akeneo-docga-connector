@@ -2,16 +2,13 @@
 
 namespace Oniti\Docga\ConnectorBundle\AttributeType;
 
-use Pim\Bundle\CatalogBundle\AttributeType\AbstractAttributeType;
+use Akeneo\Pim\Structure\Component\AttributeType\AbstractAttributeType;
 
 /**
  * Docga attribute type
 **/
 class DocgaType extends AbstractAttributeType
 {
-    /** @var string List separator for flat format */
-    const FLAT_SEPARATOR = ',';
-
     /**
      * {@inheritdoc}
      */

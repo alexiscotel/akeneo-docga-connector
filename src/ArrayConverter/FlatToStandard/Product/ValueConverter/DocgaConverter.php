@@ -3,7 +3,7 @@
 namespace Oniti\Docga\ConnectorBundle\ArrayConverter\FlatToStandard\Product\ValueConverter;
 
 use Oniti\Docga\ConnectorBundle\AttributeType\DocgaType;
-use Pim\Component\Connector\ArrayConverter\FlatToStandard\Product\ValueConverter\ValueConverterInterface;
+use Akeneo\Pim\Enrichment\Component\Product\Connector\ArrayConverter\FlatToStandard\ValueConverter\ValueConverterInterface;
 
 /**
  * Converts a docga value from Akeneo PIM flat format to Akeneo PIM standard format

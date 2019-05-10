@@ -2,9 +2,9 @@
 
 namespace Oniti\Docga\ConnectorBundle\Model;
 
-use Pim\Component\Catalog\Model\AbstractValue;
-use Pim\Component\Catalog\Model\AttributeInterface;
-use Pim\Component\Catalog\Model\ValueInterface;
+use Akeneo\Pim\Enrichment\Component\Product\Model\AbstractValue;
+use Akeneo\Pim\Structure\Component\Model\AttributeInterface;
+use Akeneo\Pim\Enrichment\Component\Product\Model\ValueInterface;
 
 class DocgaValue extends AbstractValue implements ValueInterface
 {
@@ -35,21 +35,24 @@ class DocgaValue extends AbstractValue implements ValueInterface
     }
 
     /**
-     * @param string $item
+     * {@inheritdoc}
      */
-    public function removeItem(string $item)
+    public function __toString() : string
     {
-        $data = array_filter($this->data, function ($value) use ($item) {
-            return $value !== $item;
-        });
-        $this->data = array_values($data);
+        return trim((string)$this->data);
     }
 
     /**
      * {@inheritdoc}
      */
-    public function __toString()
+    public function isEqual(ValueInterface $value): bool
     {
-        return trim((string)$this->data);
+        if (!$value instanceof DocgaValue ||
+            $this->getScopeCode() !== $value->getScopeCode() ||
+            $this->getLocaleCode() !== $value->getLocaleCode()) {
+            return false;
+        }
+
+        return $value->getData() === $this->getData();
     }
 }

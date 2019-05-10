@@ -2,9 +2,9 @@
 
 namespace Oniti\Docga\ConnectorBundle\Filter;
 
-use Pim\Bundle\EnrichBundle\Provider\Filter\FilterProviderInterface;
 use Oniti\Docga\ConnectorBundle\AttributeType\ExtendedAttributeTypes;
-use Pim\Component\Catalog\Model\AttributeInterface;
+use Akeneo\Platform\Bundle\UIBundle\Provider\Filter\FilterProviderInterface;
+use Akeneo\Pim\Structure\Component\Model\AttributeInterface;
 
 /**
  * Filter provider for text collection attribute

@@ -2,11 +2,11 @@
 
 namespace Oniti\Docga\ConnectorBundle\Factory\Value;
 
-use Akeneo\Component\StorageUtils\Exception\InvalidPropertyTypeException;
-use Pim\Component\Catalog\AttributeTypes;
+use Akeneo\Tool\Component\StorageUtils\Exception\InvalidPropertyTypeException;
+use Akeneo\Pim\Structure\Component\AttributeTypes;
 use Akeneo\Pim\Enrichment\Component\Product\Factory\Value\ValueFactoryInterface;
-use Akeneo\Pim\Structure\Component\Model\AttributeInterface;
 use Akeneo\Pim\Enrichment\Component\Product\Model\ValueInterface;
+use Akeneo\Pim\Structure\Component\Model\AttributeInterface;
 
 
 class DocgaValueFactory implements ValueFactoryInterface
