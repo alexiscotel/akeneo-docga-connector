@@ -27,6 +27,7 @@ class DocgaExtendedAttributeTypeExtension extends Extension
         $loader->load('providers.yml');
         $loader->load('updaters.yml');
         $loader->load('validators.yml');
+        $loader->load('services.yml');
 
         $loader->load('entities.yml');
         $loader->load('factories.yml');

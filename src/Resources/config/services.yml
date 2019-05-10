@@ -1,0 +1,8 @@
+parameters:
+    docga_extended_attribute_type.provider.field.docga.class: Oniti\Docga\ConnectorBundle\Enrich\Provider\Field\DocgaFieldProvider
+
+services:
+    acme.custom.provider.field.range:
+        class: '%docga_extended_attribute_type.provider.field.docga.class%'
+        tags:
+            - { name: pim_enrich.provider.field, priority: 90 }

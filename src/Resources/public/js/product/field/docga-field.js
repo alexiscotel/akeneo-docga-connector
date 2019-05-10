@@ -4,7 +4,7 @@ define([
 		'jquery',
 		'underscore',
 		'pim/field',
-		'oniti/docga/template/product/field/docga',
+		'docga-extended-attribute-type/templates/product/field/docga',
 		'routing',
 		'jquery.slimbox',
 	], function ($, _, Field, fieldTemplate, Routing) {
