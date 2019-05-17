@@ -1,6 +1,6 @@
 pim_catalog_docga: Docga
 
-pim_enrich.entity.attribute.type.pim_catalog_docga: Docga
+pim_enrich.entity.attribute.property.type.pim_catalog_docga: Docga
 docga:
   field:
     select_file: Select file
@@ -22,5 +22,5 @@ docga:
       placeholder : you're secret
     tab: Docga
     copyright:
-      label: © 2018 Oniti. All right reserved.
+      label: © 2019 Oniti. All right reserved.
       url: https://www.oniti.fr
