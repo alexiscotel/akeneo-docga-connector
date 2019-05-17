@@ -1,6 +1,5 @@
 pim_catalog_docga: Docga
-
-pim_enrich.entity.attribute.property.type.pim_catalog_docga: Docga
+ppim_enrich.entity.attribute.property.type.pim_catalog_docga: Docga
 docga:
   field:
     select_file: Select file

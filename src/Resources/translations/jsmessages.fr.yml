@@ -1,5 +1,4 @@
 pim_catalog_docga: Docga
-
 pim_enrich.entity.attribute.property.type.pim_catalog_docga: Docga
 docga:
   field:
