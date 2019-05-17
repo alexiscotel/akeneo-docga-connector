@@ -1,13 +1,15 @@
 config:
     shim:
-        oniti/docga/connector/field-docga:
+        docga-extended-attribute-type/docga-field:
             deps:
                 - docgaextendedattributetype/js/product/field/docga_api
     paths:
         docga-extended-attribute-type/docga-field: docgaextendedattributetype/js/product/field/docga-field
-        docga-extended-attribute-type/templates/product/field/docga: docgaextendedattributetype/templates/product/field/docga.html
+        docga-extended-attribute-type/templates/product/field/docga: docgaextendedattributetype/templates/product/field/docga-field.html
         docga-extended-attribute-type/templates/datagrid/cell/docga: docgaextendedattributetype/templates/datagrid/cell/docga.html
         oro/datagrid/docga-cell: docgaextendedattributetype/js/datagrid/cell/docga-cell
+        docga-extended-attribute-type/configuration/tab: docgaextendedattributetype/js/configuration/tab
+        docga-extended-attribute-type/configuration/tab-template: docgaextendedattributetype/templates/system/group/configuration.html
 
     config:
         pim/form/common/attributes/create-button:

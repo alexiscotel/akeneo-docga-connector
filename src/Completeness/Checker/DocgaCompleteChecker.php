@@ -37,9 +37,7 @@ class DocgaCompleteChecker implements ValueCompleteCheckerInterface
             return false;
         }
 
-        $collection = $value->getData();
-
-        return null !== $collection && count($collection) > 0;
+        return null !== $value->getData();
     }
 
     /**

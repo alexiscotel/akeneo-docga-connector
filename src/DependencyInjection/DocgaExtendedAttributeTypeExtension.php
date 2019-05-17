@@ -12,6 +12,9 @@ use Symfony\Component\HttpKernel\DependencyInjection\Extension;
  */
 class DocgaExtendedAttributeTypeExtension extends Extension
 {
+    public function getAlias(){
+        return 'docga_extended_attribute_type';
+    }
     /**
      * {@inheritdoc}
      */
@@ -27,14 +30,14 @@ class DocgaExtendedAttributeTypeExtension extends Extension
         $loader->load('providers.yml');
         $loader->load('updaters.yml');
         $loader->load('validators.yml');
-
         $loader->load('entities.yml');
         $loader->load('factories.yml');
         $loader->load('query_builders.yml');
-        if (class_exists('PimEnterprise\Bundle\WorkflowBundle\PimEnterpriseWorkflowBundle')) {
+
+        if (class_exists('Akeneo\Pim\WorkOrganization\Workflow\Bundle\AkeneoPimWorkflowBundle')) {
             $loader->load('query_builders_ee.yml');
         }
-
+        
         $loader->load('datagrid/attribute_types.yml');
         $loader->load('datagrid/filters.yml');
     }

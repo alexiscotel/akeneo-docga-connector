@@ -42,7 +42,7 @@ class DocgaConverter implements ValueConverterInterface
             $attributeFieldInfo['attribute']->getCode() => [[
                 'locale' => $attributeFieldInfo['locale_code'],
                 'scope'  => $attributeFieldInfo['scope_code'],
-                'data'   => trim((string)$value),
+                'data'   => json_encode($value),
             ]],
         ];
     }
