@@ -4,13 +4,13 @@ mappings:
     pimee_workflow_published_product:
         dynamic_templates:
             -
-                text_collection_scopable_localizable_structure:
+                docga_scopable_localizable_structure:
                     path_match: 'values.*-docga.*'
                     match_mapping_type: 'object'
                     mapping:
                         type: 'object'
             -
-                text_collection:
+                docga:
                     path_match: 'values.*-docga.*'
                     mapping:
                         type: 'keyword'
@@ -19,13 +19,28 @@ mappings:
     pimee_workflow_product_proposal:
         dynamic_templates:
             -
-                text_collection_scopable_localizable_structure:
+                docga_scopable_localizable_structure:
                     path_match: 'values.*-docga.*'
                     match_mapping_type: 'object'
                     mapping:
                         type: 'object'
             -
-                text_collection:
+                docga:
+                    path_match: 'values.*-docga.*'
+                    mapping:
+                        type: 'keyword'
+                        index: 'not_analyzed'
+
+    pimee_catalog_product:
+        dynamic_templates:
+            -
+                docga_scopable_localizable_structure:
+                    path_match: 'values.*-docga.*'
+                    match_mapping_type: 'object'
+                    mapping:
+                        type: 'object'
+            -
+                docga:
                     path_match: 'values.*-docga.*'
                     mapping:
                         type: 'keyword'
