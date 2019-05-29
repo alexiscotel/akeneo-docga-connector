@@ -27,11 +27,12 @@ elasticsearch_index_configuration_files:
     - '%kernel.root_dir%/../vendor/oniti/akeneo-docga-connector/src/Resources/config/elasticsearch/index_configuration.yml'
 ```
 
-For the Enterprise edition, there is another file to register:
+For the Enterprise edition, there are two other files to register:
 ```yaml
-elasticsearch_index_configuration_files:
-     - '%kernel.root_dir%/../vendor/oniti/akeneo-docga-connector/src/Resources/config/elasticsearch/index_configuration.yml'
-     - '%kernel.root_dir%/../vendor/oniti/akeneo-docga-connector/src/Resources/config/elasticsearch/index_configuration_ee.yml'  
+elasticsearch_index_configuration_files_product_proposal:
+     - '%kernel.root_dir%/../vendor/oniti/akeneo-docga-connector/src/Resources/config/elasticsearch/index_configuration_ee_product_proposal.yml'
+elasticsearch_index_configuration_files_published_product:
+     - '%kernel.root_dir%/../vendor/oniti/akeneo-docga-connector/src/Resources/config/elasticsearch/index_configuration_ee_published_product.yml'   
 ```
 
 If this is a fresh install, you can then proceed with a standard installation.
