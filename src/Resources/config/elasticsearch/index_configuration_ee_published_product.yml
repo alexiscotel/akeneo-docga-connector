@@ -1,0 +1,17 @@
+#See PR 6980 for a detailled explaination of the configuration
+#https://github.com/akeneo/pim-community-dev/pull/6980
+mappings:
+    pimee_workflow_published_product:
+        dynamic_templates:
+            -
+                docga_scopable_localizable_structure:
+                    path_match: 'values.*-docga.*'
+                    match_mapping_type: 'object'
+                    mapping:
+                        type: 'object'
+            -
+                docga:
+                    path_match: 'values.*-docga.*'
+                    mapping:
+                        type: 'keyword'
+                        index: 'not_analyzed'
