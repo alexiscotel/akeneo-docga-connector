@@ -2,7 +2,8 @@
 
 define([
     'pim/field',
-    'underscore'
+    'underscore',
+    'docga-extended-attribute-type/templates/product/field/docga',
 ], function (
     Field,
     _,
@@ -14,7 +15,7 @@ define([
             'change .field-input:first input[type="range"]': 'updateModel'
         },
         renderInput: function (context) {
-            this.$el.html('<div>Coucou</div>')
+            this.$el.html(fieldTemplate)
             return this;
         },
         updateModel: function () {
