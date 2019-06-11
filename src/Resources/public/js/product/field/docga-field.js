@@ -12,7 +12,7 @@ define([
     DocGaAPI
 ) {
     return Field.extend({
-        fieldTemplate: _.template(fieldTemplate),
+        template: _.template(fieldTemplate),
         events: {
             'click .add-file': 'selectFile',
             'click .remove-file': 'removeFile'

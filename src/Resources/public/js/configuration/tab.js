@@ -58,7 +58,6 @@ define([
                     }
                 }
                 data[element.attr('id')].value = element.val();
-                console.log(data)
                 this.setData(data);
 
             }
