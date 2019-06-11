@@ -1,8 +1,11 @@
 config:
-    shim:
-        docga-extended-attribute-type/docga-field:
-            deps:
-                - docgaextendedattributetype/js/product/field/docga_api
+#    shim:
+#        docga-api:
+#            exports: docga-extended-attribute-type/docga-api
+#        docga-extended-attribute-type/docga-field:
+#            deps:
+#                - docga-api
+#            exports: docgaextendedattributetype/js/product/field/docga-field
     paths:
         docga-extended-attribute-type/docga-field: docgaextendedattributetype/js/product/field/docga-field
         docga-extended-attribute-type/templates/product/field/docga: docgaextendedattributetype/templates/product/field/docga-field.html
@@ -10,6 +13,7 @@ config:
         oro/datagrid/docga-cell: docgaextendedattributetype/js/datagrid/cell/docga-cell
         docga-extended-attribute-type/configuration/tab: docgaextendedattributetype/js/configuration/tab
         docga-extended-attribute-type/configuration/tab-template: docgaextendedattributetype/templates/system/group/configuration.html
+        docga-extended-attribute-type/docga-api: docgaextendedattributetype/js/product/field/docga_api
 
     config:
         pim/form/common/attributes/create-button:

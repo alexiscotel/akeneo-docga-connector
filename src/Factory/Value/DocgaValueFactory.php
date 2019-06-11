@@ -62,14 +62,6 @@ class DocgaValueFactory implements ValueFactoryInterface
         if (null === $data) {
             return;
         }
-
-        if (!is_array($data)) {
-            throw InvalidPropertyTypeException::arrayExpected(
-                $attribute->getCode(),
-                static::class,
-                $data
-            );
-        }
     }
 
     /**
