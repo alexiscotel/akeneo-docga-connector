@@ -16,4 +16,5 @@ services:
         arguments:
             - '@pim_catalog.repository.cached_attribute'
         tags:
-            - { name: pim_serializer.normalizer, priority: 90 }
+            - { name: pim_serializer.normalizer, priority: 150 }
+            - { name: pim_internal_api_serializer.normalizer, priority: 150 }

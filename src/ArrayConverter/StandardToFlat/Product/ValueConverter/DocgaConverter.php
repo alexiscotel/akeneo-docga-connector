@@ -25,11 +25,11 @@ class DocgaConverter extends AbstractValueConverter implements ValueConverterInt
 
         $flatName = $this->columnsResolver->resolveFlatAttributeName(
             $attributeCode,
-            $value['locale'],
-            $value['scope']
+            $data['locale'],
+            $data['scope']
         );
 
-        $convertedItem[$flatName] = json_decode($value);
+        $convertedItem[$flatName] = json_decode($data['data']);
 
         return $convertedItem;
     }
