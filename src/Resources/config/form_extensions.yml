@@ -1,8 +1,8 @@
-attribute_fields:
-    pim_catalog_docga: docga-extended-attribute-type/docga-field
-extensions:
-    oro-system-config-tab-docga:
-        module: docga-extended-attribute-type/configuration/tab
-        parent: oro-system-config-tabs
-        targetZone: container
-        position: 110
+#attribute_fields:
+#    pim_catalog_docga: docga-extended-attribute-type/docga-field
+#extensions:
+#    oro-system-config-tab-docga:
+#        module: docga-extended-attribute-type/configuration/tab
+#        parent: oro-system-config-tabs
+#        targetZone: container
+#        position: 110

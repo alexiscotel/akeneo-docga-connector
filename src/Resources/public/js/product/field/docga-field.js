@@ -12,21 +12,21 @@ define([
     DocGaAPI
 ) {
     return Field.extend({
-        template: _.template(fieldTemplate),
+        fieldTemplate: _.template(fieldTemplate),
         events: {
             'click .add-file': 'selectFile',
             'click .remove-file': 'removeFile'
         },
         renderInput: function (context) {
-            console.log('CONTEXT', context)
             // Loads assets
-            this.assets = context.value.data ? JSON.parse(context.value.data) : [];
-
+            if(!this.assets) {
+                this.assets = context.value && context.value.data ? JSON.parse(context.value.data) : [];
+            }
             return this.fieldTemplate({
                 id : this.attribute.id,
-                assets : this.assets
+                assets : this.assets,
+                localizable: context.attribute.localizable
             })
-            // return this.fieldTemplate;
         },
         /**
          * Initialization
@@ -105,7 +105,8 @@ define([
             this.assets = this.assets.filter(function(doc){
                 return doc.slug !== slug;
             })
-            this.updateField();
+            this.updateModel();
+            this.render();
         },
         updateModel: function () {
             var data = this.assets && this.assets.length ? JSON.stringify(this.assets) : null;

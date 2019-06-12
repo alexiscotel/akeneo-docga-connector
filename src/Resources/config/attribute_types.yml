@@ -1,6 +1,5 @@
 parameters:
     docga_extended_attribute_type.attribute_type.docga.class: Oniti\Docga\ConnectorBundle\AttributeType\DocgaType
-    docga_extended_attribute_type.validator.constraint_guesser.docga.class: Oniti\Docga\ConnectorBundle\Validator\ConstraintGuesser\DocgaGuesser
 
 services:
     docga_extended_attribute_type.attribute_type.docga:
