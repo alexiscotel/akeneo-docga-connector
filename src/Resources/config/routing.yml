@@ -1,0 +1,3 @@
+docga_extended_attribute_type_route_config:
+    path: /docga/config
+    defaults: { _controller: docga_extended_attribute_type.controller.config:getConfigAction }

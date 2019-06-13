@@ -1,0 +1,7 @@
+services:
+    docga_extended_attribute_type.controller.config:
+        class: Oniti\Docga\ConnectorBundle\Controller\ConfigController
+        arguments:
+            - '%docga_url%'
+            - '%docga_api_key%'
+            - '%docga_api_secret%'
