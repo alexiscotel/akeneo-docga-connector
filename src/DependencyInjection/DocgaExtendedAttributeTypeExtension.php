@@ -21,15 +21,12 @@ class DocgaExtendedAttributeTypeExtension extends Extension
     public function load(array $config, ContainerBuilder $container)
     {
         $loader = new YamlFileLoader($container, new FileLocator(__DIR__ .'/../Resources/config'));
-        $loader->load('array_converters.yml');
         $loader->load('attribute_types.yml');
         $loader->load('comparators.yml');
-        $loader->load('completeness.yml');
-        $loader->load('denormalizers.yml');
+        $loader->load('controllers.yml');
         $loader->load('form_types.yml');
         $loader->load('providers.yml');
         $loader->load('updaters.yml');
-        $loader->load('validators.yml');
         $loader->load('entities.yml');
         $loader->load('factories.yml');
         $loader->load('query_builders.yml');

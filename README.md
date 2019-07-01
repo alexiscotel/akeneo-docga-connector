@@ -19,6 +19,22 @@ $bundles = [
 ];
 ```
 
+Add the following route in your `app/config/routing.yml` file:
+
+```
+# Docga
+oniti_docga_get_config:
+    resource: "@DocgaExtendedAttributeTypeBundle/Resources/config/routing.yml"
+```
+
+Add the following parameters in your `app/config/parameters.yml` file:
+
+```
+docga_url: https://docga-url.com/
+docga_api_key: your-api-key
+docga_api_secret: your-api-secret
+```
+
 You will also have to register the new Elasticsearch configuration files; in `app/config/pim_parameters.yml`, edit the 
 `elasticsearch_index_configuration_files` parameter and add the following values:
 

@@ -38,7 +38,7 @@ class DocgaValueFactory implements ValueFactoryInterface
             $data = $this->convertData($attribute, $data);
         }
 
-        $value = new $this->productValueClass($attribute->getCode(), $channelCode, $localeCode, $data);
+        $value = new $this->productValueClass($attribute->getCode(), $data, $channelCode, $localeCode);
 
         return $value;
     }
