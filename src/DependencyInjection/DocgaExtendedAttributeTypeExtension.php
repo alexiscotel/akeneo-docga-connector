@@ -24,6 +24,7 @@ class DocgaExtendedAttributeTypeExtension extends Extension
         $loader->load('attribute_types.yml');
         $loader->load('comparators.yml');
         $loader->load('controllers.yml');
+        $loader->load('converters.yml');
         $loader->load('form_types.yml');
         $loader->load('providers.yml');
         $loader->load('updaters.yml');
