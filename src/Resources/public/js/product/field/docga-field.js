@@ -19,9 +19,8 @@ define([
         },
         renderInput: function (context) {
             // Loads assets
-            if(!this.assets) {
-                this.assets = context.value && context.value.data ? JSON.parse(context.value.data) : [];
-            }
+            this.assets = context.value && context.value.data ? JSON.parse(context.value.data) : [];
+
             return this.fieldTemplate({
                 id : this.attribute.id,
                 assets : this.assets,
